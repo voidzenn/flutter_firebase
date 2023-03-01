@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "317294457408",
+    "firebase_url": "https://project-1-212b6-default-rtdb.firebaseio.com",
+    "project_id": "project-1-212b6",
+    "storage_bucket": "project-1-212b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317294457408:android:9cb57922583d2ec77365a5",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317294457408-3l9acvlu3bqptbififfr9h765bherkjc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdty7TQTHp7c47MF4xGgUMRRlRFSOV4DQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317294457408-3l9acvlu3bqptbififfr9h765bherkjc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "317294457408-7h14fr88ujk8i9m0t961u35tl83fovi4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterSqlite"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317294457408:android:1c016d6a2a0888857365a5",
+        "android_client_info": {
+          "package_name": "com.example.flutter_sqlite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317294457408-3l9acvlu3bqptbififfr9h765bherkjc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdty7TQTHp7c47MF4xGgUMRRlRFSOV4DQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317294457408-3l9acvlu3bqptbififfr9h765bherkjc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "317294457408-7h14fr88ujk8i9m0t961u35tl83fovi4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterSqlite"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
