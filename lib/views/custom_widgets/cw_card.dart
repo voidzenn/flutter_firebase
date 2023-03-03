@@ -7,9 +7,9 @@ class CwCard extends StatelessWidget {
 
   const CwCard(
       {Key? key,
-        required this.content,
-        required this.button,
-        required this.callback})
+      required this.content,
+      required this.button,
+      required this.callback})
       : super(key: key);
 
   @override

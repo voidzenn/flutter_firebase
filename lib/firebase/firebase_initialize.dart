@@ -4,7 +4,7 @@ import 'package:flutter_firebase/firebase_options.dart';
 class FirebaseInitialize {
   String? status = "";
 
-  initialize() async{
+  initialize() async {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );

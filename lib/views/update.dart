@@ -9,11 +9,11 @@ class Update extends StatelessWidget {
 
   Update({Key? key}) : super(key: key);
 
-  handleUpdate(String key){
+  handleUpdate(String key) {
     userController.updateUser(key);
   }
 
-  Widget updateBtn(String key){
+  Widget updateBtn(String key) {
     return ElevatedButton(
       onPressed: () {
         handleUpdate(key);
@@ -28,8 +28,12 @@ class Update extends StatelessWidget {
     final String key = args.key ?? "";
     userController.nameInputController.value.text = args.userData?.name ?? "";
 
-    return Material(child: Padding(padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-      child: CwForm(nameController: userController.nameInputController.value, actionWgt: updateBtn(key)),
+    return Material(
+        child: Padding(
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      child: CwForm(
+          nameController: userController.nameInputController.value,
+          actionWgt: updateBtn(key)),
     ));
   }
 }

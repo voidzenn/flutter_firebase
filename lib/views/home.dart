@@ -19,7 +19,7 @@ class Home extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(0, 0, 25, 0),
       child: ElevatedButton(
           onPressed: () {
-            if(key != null){
+            if (key != null) {
               userController.deleteUser(key);
             }
           },
@@ -29,23 +29,31 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded( child: StreamBuilder(stream: userController.database.onValue ,builder: (context, AsyncSnapshot<DatabaseEvent> snapshot){
-            if(snapshot.data?.snapshot.value != null){
-              final UserDataList userList = userController.getUserList(snapshot.data!.snapshot);
-              return ListView.builder(itemCount: userList.dataList?.length ,itemBuilder: (context, index){
-                final User user = userList.dataList?.elementAt(index) as User;
-                final UserData userData = UserData(name: user.userData?.name);
-                String? name = userData.name ?? "";
-                return CwCard(content: Text(name), button: deleteButton(user.key), callback: () => handleCardClick(user));
-              });
-            }else{
-              return Container();
-            }
-          }))
-        ]
-    );
+    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Expanded(
+          child: StreamBuilder(
+              stream: userController.database.onValue,
+              builder: (context, AsyncSnapshot<DatabaseEvent> snapshot) {
+                if (snapshot.data?.snapshot.value != null) {
+                  final UserDataList userList =
+                      userController.getUserList(snapshot.data!.snapshot);
+                  return ListView.builder(
+                      itemCount: userList.dataList?.length,
+                      itemBuilder: (context, index) {
+                        final User user =
+                            userList.dataList?.elementAt(index) as User;
+                        final UserData userData =
+                            UserData(name: user.userData?.name);
+                        String? name = userData.name ?? "";
+                        return CwCard(
+                            content: Text(name),
+                            button: deleteButton(user.key),
+                            callback: () => handleCardClick(user));
+                      });
+                } else {
+                  return Container();
+                }
+              }))
+    ]);
   }
 }

@@ -5,24 +5,31 @@ import 'package:get/get.dart';
 import 'package:flutter_firebase/views/routes/routes.dart';
 import 'package:flutter_firebase/views/custom_widgets/cw_dialog.dart';
 
-
 class MainLayout extends StatelessWidget {
   final Widget content;
   const MainLayout({Key? key, required this.content}) : super(key: key);
 
   Widget dialog() {
     String message = RequestController.responseMessage.value;
-    return Visibility(visible: RequestController.responseMessage.value.isNotEmpty ,child: AlertDialog(
-      content: Text(message, style: TextStyle(color: RequestController.responseStatus.value == "success" ? Colors.green : Colors.black )),
-      actions: [
-       Padding(padding: const EdgeInsets.fromLTRB(10, 5, 10, 5), child:ElevatedButton(
-         onPressed: () {
-           RequestController.responseMessage.value = "";
-         },
-         child: const Text('Close'),
-       ))
-      ],
-    ));
+    return Visibility(
+        visible: RequestController.responseMessage.value.isNotEmpty,
+        child: AlertDialog(
+          content: Text(message,
+              style: TextStyle(
+                  color: RequestController.responseStatus.value == "success"
+                      ? Colors.green
+                      : Colors.black)),
+          actions: [
+            Padding(
+                padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+                child: ElevatedButton(
+                  onPressed: () {
+                    RequestController.responseMessage.value = "";
+                  },
+                  child: const Text('Close'),
+                ))
+          ],
+        ));
   }
 
   @override
@@ -44,9 +51,7 @@ class MainLayout extends StatelessWidget {
         ),
       ),
       body: Stack(
-        children: [
-          content, Obx(() => dialog() )
-        ],
+        children: [content, Obx(() => dialog())],
       ),
       floatingActionButton: Opacity(
         opacity: Routes.isHomePage() ? 1 : 0,

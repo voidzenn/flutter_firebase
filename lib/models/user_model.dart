@@ -10,7 +10,7 @@ class UserDataList {
 
   UserDataList({this.dataList});
 
-  UserDataList.fromMap(Map<dynamic, dynamic> map){
+  UserDataList.fromMap(Map<dynamic, dynamic> map) {
     List<User> list = [];
     map.forEach((key, value) {
       list.add(User(key: key, userData: UserData.fromJson(value)));
@@ -25,19 +25,18 @@ class UserData {
 
   UserData({this.name, this.address});
 
-  UserData.fromJson(Map<dynamic, dynamic> json){
+  UserData.fromJson(Map<dynamic, dynamic> json) {
     name = json["name"];
     address = json["address"];
   }
 }
-
 
 class UserDataListPrev {
   List<UserData>? dataList;
 
   UserDataListPrev({this.dataList});
 
-  UserDataListPrev.fromMap(Map<dynamic, dynamic> map){
+  UserDataListPrev.fromMap(Map<dynamic, dynamic> map) {
     List<dynamic> list = [];
     map.forEach((key, value) {
       list.add(UserData.fromJson(value));

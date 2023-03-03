@@ -9,8 +9,8 @@ class UserController extends GetxController {
   final DatabaseReference database = UserService().database;
   final UserService _userService = UserService();
   final RequestController requestController = RequestController();
-  final Rx<TextEditingController> nameInputController = TextEditingController()
-      .obs;
+  final Rx<TextEditingController> nameInputController =
+      TextEditingController().obs;
 
   UserDataList getUserList(DataSnapshot snapshot) {
     UserDataList userList = UserDataList.fromMap(snapshot.value as dynamic);
@@ -18,35 +18,40 @@ class UserController extends GetxController {
   }
 
   void createUser() {
-    if(nameInputController.value.text.isNotEmpty){
-      _userService.createUser(nameInputController.value.text).then((response) => {
-        if(response.status == "success"){
-          RequestController.responseMessage.value = response.message!,
-          RequestController.responseStatus.value = response.status!,
-        }
-      });
+    if (nameInputController.value.text.isNotEmpty) {
+      _userService
+          .createUser(nameInputController.value.text)
+          .then((response) => {
+                if (response.status == "success")
+                  {
+                    RequestController.responseMessage.value = response.message!,
+                    RequestController.responseStatus.value = response.status!,
+                  }
+              });
     }
   }
 
-  void updateUser(String key){
-    if(nameInputController.value.text.isNotEmpty){
+  void updateUser(String key) {
+    if (nameInputController.value.text.isNotEmpty) {
       UserData userData = UserData(name: nameInputController.value.text);
       User user = User(key: key, userData: userData);
       _userService.updateUser(user).then((response) => {
-        if(response.status == "success"){
-          RequestController.responseMessage.value = response.message!,
-          RequestController.responseStatus.value = response.status!,
-        }
-      });
+            if (response.status == "success")
+              {
+                RequestController.responseMessage.value = response.message!,
+                RequestController.responseStatus.value = response.status!,
+              }
+          });
     }
   }
 
   void deleteUser(String key) async {
     _userService.deleteUser(key).then((response) => {
-      if(response.status == "success"){
-        RequestController.responseMessage.value = response.message!,
-        RequestController.responseStatus.value = response.status!,
-      }
-    });
+          if (response.status == "success")
+            {
+              RequestController.responseMessage.value = response.message!,
+              RequestController.responseStatus.value = response.status!,
+            }
+        });
   }
 }

@@ -7,12 +7,12 @@ class FormInput extends StatelessWidget {
 
   FormInput({Key? key}) : super(key: key);
 
-  handleSave(){
+  handleSave() {
     // print('handle save');
     userController.createUser();
   }
 
-  Widget saveBtnWgt(){
+  Widget saveBtnWgt() {
     return ElevatedButton(
       onPressed: () {
         handleSave();
@@ -25,8 +25,12 @@ class FormInput extends StatelessWidget {
   Widget build(BuildContext context) {
     userController.nameInputController.value.text = "";
 
-    return Material(child: Padding(padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-      child: CwForm(nameController: userController.nameInputController.value, actionWgt: saveBtnWgt()),
+    return Material(
+        child: Padding(
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      child: CwForm(
+          nameController: userController.nameInputController.value,
+          actionWgt: saveBtnWgt()),
     ));
   }
 }
