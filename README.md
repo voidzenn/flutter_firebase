@@ -1,16 +1,17 @@
-# flutter_firebase
+# Flutter | Dart - Simple User CRUD
+## GetX State Managment
+## Firebase Realtime Database
 
-A new Flutter project.
+This app already have the **```firebase_options.dart```** file.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+It will connect to my current Firebase Project.
 
-A few resources to get you started if this is your first Flutter project:
+### Running the application on the web
+- Open the app on VS Code or Android Studio
+- Run this command to run via the web **```flutter run -d "brower-name"```** | e.g. **```flutter run -d chrome```**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Note: You can change the **```firebase_options.dart```** file if you want to connect your firebase realtime database with your credentials
+
+### App Images
