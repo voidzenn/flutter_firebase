@@ -20,12 +20,6 @@ class DefaultFirebaseOptions {
       return web;
     }
     switch (defaultTargetPlatform) {
-      case TargetPlatform.android:
-        return android;
-      case TargetPlatform.iOS:
-        return ios;
-      case TargetPlatform.macOS:
-        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -52,36 +46,5 @@ class DefaultFirebaseOptions {
     databaseURL: 'https://project-1-212b6-default-rtdb.firebaseio.com',
     storageBucket: 'project-1-212b6.appspot.com',
     measurementId: 'G-PERR0DLS40',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAdty7TQTHp7c47MF4xGgUMRRlRFSOV4DQ',
-    appId: '1:317294457408:android:9cb57922583d2ec77365a5',
-    messagingSenderId: '317294457408',
-    projectId: 'project-1-212b6',
-    databaseURL: 'https://project-1-212b6-default-rtdb.firebaseio.com',
-    storageBucket: 'project-1-212b6.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCnUoLgWtVl0SYTy8nzKGraGhT3MNPdglI',
-    appId: '1:317294457408:ios:bdf8bd8c27c5151c7365a5',
-    messagingSenderId: '317294457408',
-    projectId: 'project-1-212b6',
-    databaseURL: 'https://project-1-212b6-default-rtdb.firebaseio.com',
-    storageBucket: 'project-1-212b6.appspot.com',
-    iosClientId: '317294457408-9se10ip4em8nfckeri9n1burvm4g8t7g.apps.googleusercontent.com',
-    iosBundleId: 'com.example.flutterFirebase',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCnUoLgWtVl0SYTy8nzKGraGhT3MNPdglI',
-    appId: '1:317294457408:ios:bdf8bd8c27c5151c7365a5',
-    messagingSenderId: '317294457408',
-    projectId: 'project-1-212b6',
-    databaseURL: 'https://project-1-212b6-default-rtdb.firebaseio.com',
-    storageBucket: 'project-1-212b6.appspot.com',
-    iosClientId: '317294457408-9se10ip4em8nfckeri9n1burvm4g8t7g.apps.googleusercontent.com',
-    iosBundleId: 'com.example.flutterFirebase',
   );
 }
